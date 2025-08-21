@@ -82,9 +82,21 @@ If you prefer manual deployment instead of auto-deployment:
 ## Configuration Details
 
 The project is pre-configured with:
-- **Base path**: `/otologic-web/` (set in `vite.config.ts`)
-- **Build output**: `dist/` directory
+- **Base path**: `/` (root domain - set in `vite.config.ts`)
+- **Build output**: `dist/` directory  
 - **Static assets**: Properly handled by Vite
+
+### Base Path Configuration
+
+The `base` setting in `vite.config.ts` determines the URL path:
+
+- **`base: "/"`** - Site works at root domain: `https://username.github.io`
+- **`base: "/repository-name/"`** - Site works at subpath: `https://username.github.io/repository-name`
+
+**Current configuration serves from root domain.** If you're using:
+- **Custom domain** → Use `base: "/"`
+- **GitHub Pages with custom domain** → Use `base: "/"`  
+- **Standard GitHub Pages repository** → You may need `base: "/repository-name/"`
 
 ## Troubleshooting
 
