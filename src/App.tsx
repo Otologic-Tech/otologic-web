@@ -3,6 +3,7 @@ import { Separator } from "@/components/ui/separator"
 import { Button } from "@/components/ui/button"
 import { Mail, Cloud, Camera, Brain } from "lucide-react"
 import './App.css'
+import logo from './assets/icon.png'
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">
-            Otologic Technologies
+            <img src={logo} alt="Otologic Technologies" className="h-15 w-15 inline-block mr-2" /> Otologic Technologies
           </h1>
           <p className="text-xl text-slate-600 dark:text-slate-300 mb-6">
             Enhancing Ear Health Diagnostics Through Digital Innovation
@@ -21,6 +22,18 @@ function App() {
 
         {/* Main Content */}
         <div className="space-y-8">
+          {/* Closure Notice */}
+          <Card className="border-amber-200 bg-amber-50 dark:border-amber-800 dark:bg-amber-900/10">
+            <CardHeader>
+              <CardTitle className="text-amber-800 dark:text-amber-200">Operations Update</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-amber-700 dark:text-amber-300">
+                As of September 2025, Otologic Technologies has ceased operations. We thank all our partners and supporters for their trust in our mission to improve ear health diagnostics.
+              </p>
+            </CardContent>
+          </Card>
+
           {/* Company Description */}
           <Card>
             <CardHeader>
@@ -28,8 +41,8 @@ function App() {
             </CardHeader>
             <CardContent>
               <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                Otologic Technologies was dedicated to revolutionizing ear health diagnostics through innovative 
-                digital otoscopy solutions. Our products aimed to simplify clinical workflows, improve diagnostic 
+                Otologic Technologies was dedicated to revolutionizing ear health diagnostics through innovative
+                digital otoscopy solutions. Our products aimed to simplify clinical workflows, improve diagnostic
                 accuracy, and elevate patient care in the field of otology.
               </p>
             </CardContent>
@@ -46,7 +59,7 @@ function App() {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  A secure, HIPAA-compliant cloud platform for storing and sharing digital otoscopy 
+                  A secure, HIPAA-compliant cloud platform for storing and sharing digital otoscopy
                   images and videos, facilitating collaboration among clinicians and patients.
                 </CardDescription>
               </CardContent>
@@ -61,7 +74,7 @@ function App() {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Proprietary software designed to generate a single, clear image of the tympanic 
+                  Proprietary software designed to generate a single, clear image of the tympanic
                   membrane from video feeds, enhancing visibility and aiding in precise analysis.
                 </CardDescription>
               </CardContent>
@@ -76,25 +89,12 @@ function App() {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  An AI-driven tool that provides probabilities of tympanic membrane conditions, 
+                  An AI-driven tool that provides probabilities of tympanic membrane conditions,
                   supporting informed clinical decision-making.
                 </CardDescription>
               </CardContent>
             </Card>
           </div>
-
-          {/* Closure Notice */}
-          <Card className="border-amber-200 bg-amber-50 dark:border-amber-800 dark:bg-amber-900/10">
-            <CardHeader>
-              <CardTitle className="text-amber-800 dark:text-amber-200">Operations Update</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-amber-700 dark:text-amber-300">
-                As of August 2025, Otologic Technologies has ceased operations. We thank all our 
-                customers, partners, and supporters for their trust in our mission to improve ear health diagnostics.
-              </p>
-            </CardContent>
-          </Card>
 
           {/* Contact Information */}
           <Card className="text-center">
@@ -106,9 +106,9 @@ function App() {
                 For any inquiries or further information, please reach out to us:
               </p>
               <Button asChild variant="default" size="lg">
-                <a href="mailto:contact@otologictech.com" className="inline-flex items-center gap-2">
+                <a href="mailto:alex@otologictech.com" className="inline-flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  contact@otologictech.com
+                  alex@otologictech.com
                 </a>
               </Button>
             </CardContent>
