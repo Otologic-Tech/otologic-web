@@ -14,8 +14,8 @@ This repository includes a GitHub Actions workflow that automatically deploys to
    - Under "Source", select **"GitHub Actions"** 
    - The workflow is already configured in `.github/workflows/deploy.yml`
 
-2. **Push to Master:**
-   - Any push to the `master` branch will automatically trigger a build and deployment
+2. **Push to Main/Master:**
+   - Any push to the `main` or `master` branch will automatically trigger a build and deployment
    - Your site will be available at: `https://yourusername.github.io/otologic-web`
    - The workflow will build the project and deploy the `dist` folder contents
 
@@ -24,7 +24,7 @@ This repository includes a GitHub Actions workflow that automatically deploys to
    - Each deployment creates a new GitHub Pages environment
 
 ### Workflow Features:
-- ✅ Triggers on push to master branch
+- ✅ Triggers on push to main or master branch
 - ✅ Can be manually triggered from GitHub Actions tab
 - ✅ Builds with Node.js 20 and npm
 - ✅ Uploads build artifacts to GitHub Pages
@@ -93,6 +93,12 @@ The project is pre-configured with:
 2. Ensure the source is set to "GitHub Actions"
 3. Verify the workflow file exists at `.github/workflows/deploy.yml`
 4. Check the Actions tab for detailed error logs
+
+**If you get "Branch not allowed to deploy" error:**
+1. Go to Settings → Environments → github-pages
+2. Under "Deployment branches and tags", select "No restriction" OR
+3. Add your branch name (main/master) to the allowed branches list
+4. Alternatively, go to Settings → Pages and ensure source is "GitHub Actions"
 
 **If assets don't load on GitHub Pages:**
 - Ensure the `base` path in `vite.config.ts` matches your repository name
